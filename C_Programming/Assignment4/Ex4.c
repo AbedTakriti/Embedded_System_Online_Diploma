@@ -1,34 +1,29 @@
-/*
- * Ex1.c
- *
- *  Created on: Jun 15, 2021
- *      Author: Abdulrahman
- */
 #include "stdio.h"
-#include "string.h"
 
-int power(int a,int b)
+
+int power(int x,int y)
 {
-	if(b!=0)
-		return a=a*power(a,b-1);
-	else
-		return 1;
-}
 
+if( y!=1)
+
+return x * power(x,y-1);
+}
 void main()
 
 {
-	int x,p;
-	printf("Enter a base number: ");
+int a,b;
+	printf("Enter  base number :");
 	fflush(stdin);
 	fflush(stdout);
-	scanf("%d",&x);
-	printf("Enter a power : ");
-	fflush(stdin);
-	fflush(stdout);
-	scanf("%d",&p);
-	printf("%d ^ %d = %d",x, p, power(x,p));
+	scanf("%d",&a);
+	printf("Enter  power number :");
+		fflush(stdin);
+		fflush(stdout);
+		scanf("%d",&b);
+		if(b==0)
+	printf("%d ^ %d = %d\n",a,b,1);
+		else
+			printf("%d ^ %d = %d\n",a,b,power(a,b));
 
-}
-
+	}
 
