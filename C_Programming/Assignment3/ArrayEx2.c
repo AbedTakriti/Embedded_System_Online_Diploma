@@ -1,32 +1,26 @@
-/*
- * Ex1.c
- *
- *  Created on: Jun 15, 2021
- *      Author: Abdulrahman
- */
 #include "stdio.h"
 
-int main()
+void main()
 
 {
-int x=0;
-float data[x],sum=0;//To set the array size as variable is the only way I found to make it working
-int i;
-printf("Enter the numbers of data\n");
-fflush(stdin);
-fflush(stdout);
-scanf("%d",&x);
-for(i=0;i<x;i++)
-	{
-		printf("%d. Enter the number:\n",i+1);
-		fflush(stdin);
-		fflush(stdout);
-		scanf("%f",&data[i]);
-		sum=sum+data[i];
+	int i, n;
+	float X1[10], sum = 0.0;
+	printf("Please specify the number of elements:\n");
+	fflush(stdin);
+	fflush(stdout);
+	scanf("%d", &n);
+	printf("Now enter the elements:\n");
+	fflush(stdin);
+	fflush(stdout);
+	for (i = 0; i < n; i++) {
+
+		scanf("%f", &X1[i]);
+
 	}
-printf("Avergae = %f",sum/x);
-return 0;
+	for (i = 0; i < n; i++) {
+
+		sum = sum + X1[i];
+
+	}
+	printf("The average is %.1f", sum / n);
 }
-
-
-

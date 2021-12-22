@@ -1,36 +1,30 @@
-/*
- * Ex1.c
- *
- *  Created on: Jun 15, 2021
- *      Author: Abdulrahman
- */
 #include "stdio.h"
 
 
-void PrimeNumbers(int a, int b)
+int Check_prime(int num)
 {
-	int i=a;
+	int j;
+	int flag=0;
 
 
-	for(i=a;i<=b;i++)
+	for(j=2;j<=num/2;j++)
 	{
 
-		if ( i==2 || i==3||i==5||i==7  )
-			printf(" %d",i);
-
-		else
+		if (num %j ==0 )
 		{
-			if (  i%2 && i%3 && i%5 && i%7)
-				printf(" %d",i);
-		}
-	}
+			flag =1;
+			break;
 
+		}
+
+	}
+return flag;
 }
 
 void main()
 
 {
-	int x,y;
+	int x,y,i;
 	printf("Enter the lower and upper interval respectively:");
 	fflush(stdin);
 	fflush(stdout);
@@ -39,8 +33,10 @@ void main()
 	fflush(stdout);
 	scanf("%d",&y);
 	printf("Primer numbers between %d and %d are: ",x,y);
-	PrimeNumbers(x,y);
+	for(i=x+1;i<y;i++)
+	{
+		if (Check_prime(i) ==0)
+		printf("%d ", i);
+	}
 
 }
-
-
