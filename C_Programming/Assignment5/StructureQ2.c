@@ -27,7 +27,7 @@ struct sDistance read_data(char name[]) {
 		z.feet++;
 		z.inch=z.inch-12;
 	}
-	printf("Sum of distances= %d' - %.2f\" \n",z.feet, z.inch);
+	printf("Sum of distances= %d' - %.1f\" \n",z.feet, z.inch);
 
 
 	}
