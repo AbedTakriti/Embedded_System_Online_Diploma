@@ -31,16 +31,16 @@
 int main(void)
 {
 
-	RCC_APB2ENR |= 1<<2; // set enbale
+	RCC_APB2ENR |= RCC_IOPAEN; // set enbale
 	GPIO_CRH &= 0xff0fffff; // clear  half byte / short from bit 20 -> 24 with register remains
 						    //untouched
 	GPIO_CRH |= 0x00200000; // set 	  half byte / short from bit 20-> 24
 	while (1)
 	{
 
-		GPIO_ODR |= 1<<13; // set bit to 1
+		GPIO_ODR |= GPIOA13; // set bit to 1
 		for(int i=0;i<5000;i++);
-		GPIO_ODR &= ~(1<<13);
+		GPIO_ODR &= ~GPIOA13;
 		for(int i=0;i<5000;i++);
 
 	}
