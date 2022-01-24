@@ -60,7 +60,7 @@ Linker script and memory map
 LOAD app.o
 LOAD uart.o
 LOAD startup.o
-OUTPUT(lab1.elf elf32-littlearm)
+OUTPUT(LAB1.elf elf32-littlearm)
 
 .ARM.attributes
                 0x00000000       0x2e
