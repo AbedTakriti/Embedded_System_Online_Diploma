@@ -12,7 +12,7 @@ all: $(PROJECT_NAME).bin
 	@echo "Building is done"
 
 %.o: %.s
-	$(CC)as.exe $(CFLAGS) $< -o $@ 2> log
+	$(CC)as.exe $(CFLAGS) $< -o $@ 
 
 %.o: %.c
 	$(CC)gcc.exe -c $(INCS) $(CFLAGS) $< -o $@
